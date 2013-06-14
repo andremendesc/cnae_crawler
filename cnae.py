@@ -12,7 +12,8 @@ urls_aceitas = (
 app = web.application(urls, globals())
 
 class cnae:        
-    def GET(self, param):
+    def GET(self):
+        param = web.input()
         if not param: 
             return 'Faltou o codigo do cnae!'
         parametro = param
